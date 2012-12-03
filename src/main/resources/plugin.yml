@@ -1,0 +1,59 @@
+name: Scarest
+version: 1.0.1
+author: Soxra
+main: de.soxra.bukkit.Scarest.Scarest
+depend: [DisguiseCraft,Vault]
+commands:
+  scarest:
+    description: Main Command for this Plugin
+    usage: /<command> <mobtype> [true | false]
+    aliases: [sc]
+permissions:
+    Scarest.*:
+        description: Allows a player to do everything
+        default: op
+        children:
+            Scarest.Mob.*: true
+    Scarest.Mob.*:
+        description: Allows a player to transform as any mob with any type
+        children:
+            Scarest.Mob.Creeper.Normal: true
+            Scarest.Mob.Creeper.Damage: true
+            Scarest.Mob.Skeleton.Normal: true
+            Scarest.Mob.Skeleton.Damage: true
+            Scarest.Mob.Zombie.Normal: true
+            Scarest.Mob.Zombie.Damage: true
+            Scarest.Mob.Ghast.Normal: true
+            Scarest.Mob.Ghast.Damage: true
+            Scarest.Mob.Golem.Normal: true
+            Scarest.Mob.Golem.Damage: true
+    Scarest.Mob.Creeper.Normal:
+        description: Allows a player to transform as a creeper without blockdamage
+        default: op
+    Scarest.Mob.Creeper.Damage:
+        description: Allows a player to transform as a creeper with blockdamage
+        default: op
+    Scarest.Mob.Skeleton.Normal:
+        description: Allows a player to transform as a skeleton with blockdamage
+        default: op
+    Scarest.Mob.Skeleton.Damage:
+        description: Allows a player to transform as a skeleton with playerdamage
+        default: op
+    Scarest.Mob.Zombie.Normal:
+        description: Allows a player to transform as a zombie without blockdamage
+        default: op
+    Scarest.Mob.Zombie.Damage:
+        description: Allows a player to transform as a zombie with blockdamage
+        default: op
+    Scarest.Mob.Ghast.Normal:
+        description: Allows a player to transform as a ghast without blockdamage
+        default: op
+    Scarest.Mob.Ghast.Damage:
+        description: Allows a player to transform as a ghast with blockdamage
+        default: op
+    Scarest.Mob.Golem.Normal:
+        description: Allows a player to transform as a golem without playerdamage
+        default: op
+    Scarest.Mob.Golem.Damage:
+        description: Allows a player to transform as a golem with playerdamage
+        default: op
