@@ -20,13 +20,16 @@ public class IrongolemUtils {
         if (Scarest.dcAPI.isDisguised(player) && Scarest.dcAPI.getDisguise(player).type == DisguiseType.IronGolem) {
             Scarest.dcAPI.undisguisePlayer(player);
         }
+        if (Scarest.dcAPI.isDisguised(player)) {
+            Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.IronGolem));
+        }
     }
 
     public void addGolem(Player player, Boolean bool) {
         Scarest.isGolem.put(player, bool);
         //MobDisguiseAPI.disguisePlayer(player, "irongolem");
         if (!Scarest.dcAPI.isDisguised(player)) {
-            Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.IronGolem));
+            Scarest.dcAPI.disguisePlayer(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.IronGolem));
         }
     }
 }

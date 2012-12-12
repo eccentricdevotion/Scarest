@@ -18,6 +18,9 @@ public class ZombieUtils {
         Scarest.isZombie.put(player, bool);
         //MobDisguiseAPI.disguisePlayer(player, "zombie");
         if (!Scarest.dcAPI.isDisguised(player)) {
+            Scarest.dcAPI.disguisePlayer(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Zombie));
+        }
+        if (Scarest.dcAPI.isDisguised(player)) {
             Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Zombie));
         }
     }

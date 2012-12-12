@@ -10,6 +10,9 @@ public class GhastUtils {
         Scarest.isGhast.put(player, bool);
         //MobDisguiseAPI.disguisePlayer(player, "ghast");
         if (!Scarest.dcAPI.isDisguised(player)) {
+            Scarest.dcAPI.disguisePlayer(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Ghast));
+        }
+        if (Scarest.dcAPI.isDisguised(player)) {
             Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Ghast));
         }
     }

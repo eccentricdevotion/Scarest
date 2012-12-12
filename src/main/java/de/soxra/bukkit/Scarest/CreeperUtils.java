@@ -26,6 +26,9 @@ public class CreeperUtils {
         Scarest.isCreeper.put(player, bool);
         //MobDisguiseAPI.disguisePlayer(player, "creeper");
         if (!Scarest.dcAPI.isDisguised(player)) {
+            Scarest.dcAPI.disguisePlayer(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Creeper));
+        }
+        if (Scarest.dcAPI.isDisguised(player)) {
             Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Creeper));
         }
     }

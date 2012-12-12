@@ -10,6 +10,9 @@ public class SkeletonUtils {
         Scarest.isSkelet.put(player, bool);
         //MobDisguiseAPI.disguisePlayer(player, "skeleton");
         if (!Scarest.dcAPI.isDisguised(player)) {
+            Scarest.dcAPI.disguisePlayer(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Skeleton));
+        }
+        if (Scarest.dcAPI.isDisguised(player)) {
             Scarest.dcAPI.changePlayerDisguise(player, new Disguise(Scarest.dcAPI.newEntityID(), DisguiseType.Skeleton));
         }
     }
