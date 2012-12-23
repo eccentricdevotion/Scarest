@@ -20,6 +20,7 @@
         </repository>
     </repositories>
     <build>
+        <finalName>Scarest</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -42,8 +43,8 @@
         </dependency>
         <dependency>
             <groupId>pgDev.bukkit.DisguiseCraft</groupId>
-            <artifactId>DisguiseCraft-dev</artifactId>
-            <version>4.1</version>
+            <artifactId>DisguiseCraft</artifactId>
+            <version>4.3</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
