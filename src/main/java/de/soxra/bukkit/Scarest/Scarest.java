@@ -41,7 +41,6 @@ public class Scarest extends JavaPlugin {
             setupDisguiseCraft();
             setupPermissions();
             registerEvents();
-            lu.logInfo("Scarest has been enabled.");
         } catch (Exception e) {
             lu.logSev("Error: ");
             e.printStackTrace();

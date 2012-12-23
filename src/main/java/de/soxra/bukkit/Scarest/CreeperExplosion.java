@@ -26,12 +26,10 @@ public class CreeperExplosion implements Listener {
                     int radius = cu.getRadius(player);
                     World world = player.getWorld();
                     Location loc = player.getLocation();
-
                     world.createExplosion(loc, radius);
                 } else {
                     World world = player.getWorld();
                     Location loc = player.getLocation();
-
                     world.createExplosion(loc, 0.0F);
                 }
             }
